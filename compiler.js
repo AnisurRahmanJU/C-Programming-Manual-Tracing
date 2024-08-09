@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const apiEndpoint = 'https://jsonplaceholder.typicode.com/posts'; // Mock API endpoint
-    const apiKey = 'sk_test_4eC39HqLyjWDarjtT1zdp7dc'; // Uder API key for demonstration
+    const apiKey = 'sk_test_4eC39HqLyjWDarjtT1zdp7dc'; // User API key for demonstration
     const compileButton = document.getElementById('compileButton');
     const resultContainer = document.getElementById('resultContainer');
 
