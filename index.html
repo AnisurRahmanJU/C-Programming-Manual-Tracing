@@ -3,42 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Iframe with Header Image</title>
+    <title>Responsive Iframe Example</title>
     <style>
-        html, body {
+        /* Basic reset */
+        body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80vw; /* Width for both header and iframe container */
-            max-width: 1200px; /* Optional max-width for larger screens */
-            position: relative;
-        }
-        .header {
             width: 100%;
-            height: 100px; /* Adjust based on your header image */
-            background: url('https://programming24.school.blog/wp-content/uploads/2023/05/c-programming.png?w=768') no-repeat center center;
-            background-size: cover;
-            border-bottom: 2px solid #ddd;
+            height: 100%;
         }
+
+        /* Container for the iframe */
         .iframe-container {
             position: relative;
             width: 100%;
-            height: calc(100vh - 150px); /* Subtract header height */
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
             overflow: hidden;
+            background: #f0f0f0;
         }
+
         .iframe-container iframe {
             position: absolute;
             top: 0;
@@ -46,33 +29,12 @@
             width: 100%;
             height: 100%;
             border: none;
-            transition: all 0.3s ease;
-        }
-        #loadingMessage, #errorMessage {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1.2em;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            border-radius: 5px;
-        }
-        #errorMessage {
-            display: none;
-            background: rgba(255, 0, 0, 0.7);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header"></div>
-        <div class="iframe-container" id="iframeContainer">
-            <div id="loadingMessage">Loading...</div>
-            <div id="errorMessage">Failed to load content. Please try again later.</div>
-        </div>
+    <div class="iframe-container">
+        <iframe https://codecast.france-ioi.org/v6/" allowfullscreen></iframe>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
