@@ -4,37 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Iframe Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Basic reset */
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        /* Container for the iframe */
-        .iframe-container {
+        /* Custom styles for the iframe */
+        .embed-responsive-16by9 {
             position: relative;
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
+            height: 0;
             overflow: hidden;
-            background: #f0f0f0;
         }
-
-        .iframe-container iframe {
+        .embed-responsive-16by9 iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            border: none;
         }
     </style>
 </head>
 <body>
-    <div class="iframe-container">
-        <iframe https://codecast.france-ioi.org/v6/" allowfullscreen></iframe>
+
+    <div class="container mt-4">
+        <h1>Responsive Iframe Example</h1>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://codecast.france-ioi.org/v6/" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
