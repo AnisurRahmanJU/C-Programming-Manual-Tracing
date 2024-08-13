@@ -7,30 +7,38 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Custom styles for the iframe */
+        /* Custom styles for the iframe container */
         .embed-responsive-16by9 {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 56.25%; /* Aspect ratio for 16:9 */
             height: 800px;
-            scrolling:auto;
+            overflow: hidden; /* Ensures no content spills out */
         }
         .embed-responsive-16by9 iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 800px;
-            scrolling:auto;
+            height: 100%;
+        }
+        .button-container {
+            
+            text-align: center;
+            margin-top: 5px; /* Adjust as needed */
         }
     </style>
 </head>
 <body>
 
     <div class="container mt-4">
-        <center><img src="logo.png" width ="100%"></center>
+        <center><img src="logo.png" width="100%"></center>
         <br>
         <div class="embed-responsive embed-responsive-16by9">
             <iframe src="https://codecast.france-ioi.org/v6/" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <!-- Centered button placed below the iframe -->
+        <div class="button-container">
+            <a href="https://codecast.france-ioi.org/v6/recorder" class="btn btn-primary">Record</a>
         </div>
     </div>
 
