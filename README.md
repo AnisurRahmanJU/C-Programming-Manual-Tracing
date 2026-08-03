@@ -5,4 +5,4 @@
 - Memory Visualizer
 - Sorting Visualizer
 - Iteration Visualizer
-- Variable updation visualizer
+- Variable Visualizer
